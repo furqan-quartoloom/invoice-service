@@ -1,0 +1,30 @@
+Invoice (root)
+├── InvoiceNumber
+├── InvoiceCurrency
+├── InvoiceAmount
+├── InvoiceDate
+├── BusinessUnit
+├── Supplier
+├── SupplierSite
+├── Description
+│
+├── invoiceDff[]                    ← ARRAY (header DFF / Approval)
+│   └── [0]
+│       └── __FLEX_Context
+│
+└── invoiceLines[]                  ← ARRAY (lines)
+    ├── [0]
+    │   ├── LineNumber
+    │   ├── LineAmount
+    │   ├── AccountingDate
+    │   ├── DistributionCombination
+    │   └── invoiceLineDff[]        ← ARRAY (line DFF / tax)
+    │       └── [0]
+    │           └── taxApplicableStatus
+    │
+    └── [1]
+        ├── LineNumber
+        ├── ...
+        └── invoiceLineDff[]
+            └── [0]
+                └── taxApplicableStatus

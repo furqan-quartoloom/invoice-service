@@ -1,0 +1,39 @@
+{
+  "InvoiceNumber": "TESTAPI02",
+  "InvoiceCurrency": "INR",
+  "InvoiceAmount": 2000,
+  "InvoiceDate": "2026-06-15",
+  "BusinessUnit": "IMS India BU",
+  "Supplier": "Bharti Airtel Limited",
+  "SupplierSite": "1-1927691676484",
+  "Description": "TEST API INV",
+  "invoiceDff": [
+    {
+      "__FLEX_Context": "Not Required"
+    }
+  ],
+  "invoiceLines": [
+    {
+      "LineNumber": 1,
+      "LineAmount": 1000,
+      "AccountingDate": "2026-06-15",
+      "DistributionCombination": "112.504.202.571200.801.7048.999.7048000100801.999.999999.999999",
+      "invoiceLineDff": [
+        {
+          "taxApplicableStatus": "NOT APPLICABLE_AP"
+        }
+      ]
+    },
+    {
+      "LineNumber": 2,
+      "LineAmount": 1000,
+      "AccountingDate": "2026-06-15",
+      "DistributionCombination": "112.504.202.215200.801.7048.999.7048000100801.999.999999.999999",
+      "invoiceLineDff": [
+        {
+          "taxApplicableStatus": "NOT APPLICABLE_AP"
+        }
+      ]
+    }
+  ]
+}

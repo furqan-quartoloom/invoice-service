@@ -1,0 +1,16 @@
+venv/
+.env
+.env.*
+!.env.example
+__pycache__/
+*.pyc
+*.pyo
+.git/
+.gitignore
+data/
+*.db
+.cursor/
+terminals/
+canvases/
+mcps/
+agent-transcripts/
