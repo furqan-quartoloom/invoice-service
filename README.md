@@ -285,9 +285,39 @@ Failed Oracle requests are not stored.
 
 # ❌ Error Responses
 
+## Validation errors (`422`)
+
+When the payload fails local validation:
+
+```json
+{
+  "success": false,
+  "error": "Invalid invoice payload",
+  "message": "2 fields need to be corrected before the invoice can be submitted.",
+  "errors": [
+    {
+      "field": "Supplier",
+      "path": "Supplier",
+      "label": "Supplier",
+      "message": "Supplier is required.",
+      "code": "missing"
+    }
+  ]
+}
+```
+
+| Field | Use in UI |
+|---|---|
+| `message` | Top-level alert text |
+| `errors[].label` | Human-readable field name |
+| `errors[].message` | Field-level error message |
+| `errors[].path` | Form field path (e.g. `invoiceLines[0].LineAmount`) |
+| `errors[].code` | `missing`, `invalid_value`, `invalid_type`, `out_of_range` |
+
+## Other errors
+
 | Status | Meaning |
 |---|---|
-| `422` | Payload validation failed |
 | `401` | Oracle authentication failed |
 | `502` | Oracle unavailable |
 | `504` | Oracle timeout |
